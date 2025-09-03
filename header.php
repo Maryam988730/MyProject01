@@ -1,3 +1,8 @@
+<?php
+session_start();
+#starts a session on every single page
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,8 +16,17 @@
         <nav>
             <div class="wrapper">
                 <ul>
-                    <li><a href="signup.php"> sign up</a></li>
-                    <li><a href="login.php"> log in</a></li>
+                    <?php
+                    #if there is a session that means user is logged in
+                    if (isset($_SESSION["useruid"])) {
+                        echo "<li><a href='profile.php'> Profile page</a></li>";
+                        echo "<li><a href='includes/logout.inc.php'> log out</a></li>";
+                    } else {  #if not then the user is not logged in
+                        echo "<li><a href='signup.php'> sign up</a></li>";
+                        echo "<li><a href='login.php'> log in</a></li>";
+                    }
+                    ?>
+
                 </ul>
             </div>
         </nav>
