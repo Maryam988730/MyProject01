@@ -7,18 +7,21 @@ include_once 'header.php';
     <?php
     #if there is a session that means user is logged in
     if (isset($_SESSION["useruid"])) {
-        echo "<p> Hello   ".$_SESSION["useruid"]."  </p>";
+        echo "<p> Hello   ".$_SESSION["useruid"]." welcome to your financial tracker  </p>";
     }
     ?>
-    <h1>This is the intro</h1>
+    <h1>Financial Tracker</h1>
 </section>
 
 <section class="index-categories">
-    <h2> some basic categories</h2>
+    <h2> Get your finaces under check</h2>
 
     <div class="categories-list">
         <div>
-            <h3>c1</h3>
+            <form action="upload.php" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <button type="submit" name="submit">Upload</button>
+            </form>
         </div>
         <div>
             <h2>c2</h2>
@@ -32,8 +35,8 @@ include_once 'header.php';
 
 
 
-<h2> some basics </h2>
-<h3> page contents </h3>
+<h2> content? </h2>
+<h3> content? </h3>
 
 <?php
 include_once 'footer.php';

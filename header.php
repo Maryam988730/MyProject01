@@ -7,12 +7,12 @@ session_start();
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title> My Project </title>
+        <title> Financial Tracker </title>
         <link rel="stylesheet" href="style.css">
 
     </head>
     <body>
-    <p>My Project?</p>
+    <p>...</p>
         <nav>
             <div class="wrapper">
                 <ul>
