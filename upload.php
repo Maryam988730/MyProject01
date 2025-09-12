@@ -2,8 +2,9 @@
 #checking if anthing was submitted
 if (isset($_POST['submit'])) {
 
-    #the superglobal $_FILES gets all the info from the file, we nbames it 'file'
+    #the superglobal $_FILES gets all the info from the file, we named it 'file'
     $file = $_FILES['file'];
+    print_r($file);
 
     #we want to sort thru files to only accept csv so we need to split the data up, 
     #its currently in the assoccitiave array from $_FILES['file']
@@ -34,10 +35,7 @@ if (isset($_POST['submit'])) {
                 move_uploaded_file($fileTmpName, $fileDestination);
 
                 header("Location: my_project.php?uploadsuccess");
-
-
-
-
+            
             } else {
                 echo "file size too large";
             }
