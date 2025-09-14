@@ -7,7 +7,7 @@ session_start();
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title> Financial Tracker </title>
+        <title> Blog app </title>
         <link rel="stylesheet" href="style.css">
 
     </head>
