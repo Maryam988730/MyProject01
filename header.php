@@ -10,6 +10,8 @@ session_start();
         <title> Blog app </title>
         <link rel="stylesheet" href="style.css">
 
+       
+
     </head>
     <body>
     <p>...</p>
